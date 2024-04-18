@@ -1,0 +1,25 @@
+.cart {
+
+	&__btn {
+		--_font-size: var(--fs-sm);
+		--_font-weight: 700;
+		--_color: #75C32C;
+
+		--_color-active: vaar(--text-color);
+
+		position: relative;
+
+		&::after {
+			content: attr(data-current);
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+			color: inherit;
+			pointer-events: none;
+			position: absolute;
+			top: calc(50% + .175rem);
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

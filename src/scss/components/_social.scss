@@ -1,0 +1,9 @@
+.social {
+	display: flex;
+	align-items: center;
+	gap: .625rem;
+
+	&__link {
+		--_icon-size: 1.5rem;
+	}
+}

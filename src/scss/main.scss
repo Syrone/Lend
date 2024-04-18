@@ -1,16 +1,22 @@
-// базовые подключения
 @import "vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
 
-// подключения компонентов страницы
+@import "./components/display";
+@import "./components/offset";
+@import "./components/typography";
+@import "./components/buttons";
+@import "./components/icons";
+@import "./components/social";
+@import "./components/callback";
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/user";
+@import "./components/cart";
+@import "./components/search";
+@import "./components/burger";
+@import "./components/overlay";
+@import "./components/grid";
 @import "./components/header";
-
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
+@import "./components/responsive";

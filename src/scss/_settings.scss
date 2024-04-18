@@ -8,6 +8,11 @@ html {
   box-sizing: inherit;
 }
 
+.page,
+.page__body {
+  overflow-x: hidden;
+}
+
 .page {
   height: 100%;
   font-family: var(--font-family, sans-serif);
@@ -15,10 +20,23 @@ html {
 }
 
 .page__body {
-  margin: 0;
   min-width: 320px;
   min-height: 100%;
-  font-size: 16px;
+  display: flex;
+  font-family: var(--font-family, sans-serif);
+  font-size: var(--fs, 1rem);
+  margin: 0;
+}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  margin-block-start: var(--header-height);
 }
 
 img {
@@ -31,12 +49,8 @@ a {
   text-decoration: none;
 }
 
-.site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
-}
-
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
 }
 
 .btn-reset {

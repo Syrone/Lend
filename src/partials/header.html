@@ -1,3 +1,168 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container">
+    <div class="header__top">
+      <a href="./index.html" class="logo mxe-8 mxe-xxl-4">
+        Logo
+      </a>
+
+      <button type="button" data-da=".header__menu-buttons,1200,1" class="btn btn-lg btn-secondary mxe-4 mxe-xl-0 px-xxl-4 order-xl-1">
+        Подобрать врача
+      </button>
+
+      <a href="tel:+79999999999" data-da=".header__menu-social,1200,1" class="btn btn-link callback__link mxe-6 mxe-xxl-4 mxe-xl-0 order-xl-1">
+        +7 (999) 999-99-99
+      </a>
+
+      <ul data-da=".header__menu-social,1200,2" class="list-reset social mxe-8 mxe-xxl-4 mxe-xl-0" title="Социальные сети">
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn btn-link social__link" aria-label="Наша страничка в Whatsapp">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/whatsapp.svg#svg-whatsapp"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn btn-link social__link" aria-label="Наша страничка во Вконтакте">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/vk.svg#svg-vk"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn btn-link social__link" aria-label="Наша страничка в Telegram">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/telegram.svg#svg-telegram"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" target="_blank" class="btn btn-link social__link" aria-label="Наша страничка в Yandex">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/yandex.svg#svg-yandex"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <button type="button" data-da=".header__menu-buttons,1200,2" class="btn btn-lg btn-primary-outline mxs-a mxs-xl-0 mxe-7 mxe-xxl-4 mxe-xl-0 px-xxl-4">
+        Записаться
+      </button>
+
+      <button type="button" data-da=".header__menu-buttons,1200,3"  class="btn btn-lg btn-secondary px-xxl-4 order-xl-2">
+        <span class="icon">
+          <svg>
+            <use xlink:href="img/icons/user.svg#svg-user"></use>
+          </svg>
+        </span>
+        Войти
+      </button>
+
+      <div class="header__top-user mxs-xl-a mxe-xl-4"></div>
+
+      <button class="btn burger d-none d-xl-flex" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+
+    <div class="header__bottom d-xl-none">
+      <nav data-da=".header__menu-body,1200,1" class="nav mxe-10 mxe-xxl-4 mxe-xl-0" title="Меню">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              Главная
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              О клинике
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              Врачи / Услуги
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              Цены
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              Направления
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              Отзывы
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              Контакты
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="btn nav__link">
+              Мероприятия
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul data-da=".header__top-user,1200,1" class="list-reset user__list mxs-10 mxs-xxl-6 mxs-xl-0">
+        <li class="user__item">
+          <a href="#" class="btn user__link cart__btn" data-current="0">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/cart.svg#svg-cart"></use>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="user__item">
+          <button type="button" class="btn btn-primary search__btn">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/search.svg#svg-search"></use>
+              </svg>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
+<div data-menu-overlay="false"></div>
+<div class="header__menu d-xl-flex d-none" data-menu="">
+  <div class="header__menu-header">
+    <button class="btn burger header__menu-close burger--active" aria-label="Закрыть меню" data-menu-close>
+      <span class="burger__line"></span>
+    </button>
+
+    <a href="./index.html" class="logo">
+      Logo
+    </a>
+  </div>
+
+  <div class="header__menu-body">
+
+  </div>
+
+  <div class="header__menu-footer">
+    <div class="header__menu-social">
+
+    </div>
+    <div class="header__menu-buttons">
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.user {
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: .375rem;
+	}
+
+	&__link {
+		--_icon-size: 2rem;
+	}
+}

@@ -1,0 +1,11 @@
+.search {
+
+	&__btn {
+		--_height: auto;
+		--_border-radius: var(--radius-xs);
+		--_padding-y: .375rem;
+		--_padding-x: .375rem;
+
+		--_icon-size: 1.125rem;
+	}
+}

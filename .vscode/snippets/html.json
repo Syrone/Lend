@@ -3,9 +3,11 @@
     "scope": "html",
     "prefix": "g-use",
     "body": [
-      "<svg class=\"\">",
-      "  <use xlink:href=\"img/sprite.svg#$2\"></use>",
-      "</svg>"
+      "<span class=\"icon\">",
+      "  <svg>",
+      "    <use xlink:href=\"img/icons/.svg#svg-\"></use>",
+      "  </svg>",
+      "</span>"
     ],
     "description": "Snippet for use svg sprites"
   },
@@ -13,7 +15,7 @@
     "scope": "html",
     "prefix": "g-burger",
     "body": [
-      "<button class=\"btn-reset burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\" data-burger>",
+      "<button class=\"btn burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\" data-burger>",
       "  <span class=\"burger__line\"></span>",
       "</button>"
     ],

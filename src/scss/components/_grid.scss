@@ -1,0 +1,26 @@
+$breakpoints: (
+	xs: 23.75rem,
+  sm: 36rem,
+  md: 48rem,
+  lg: 62rem,
+  xl: 75rem,
+	xxl: 87.5rem
+);
+
+@mixin order-classes($start, $end) {
+  @for $i from $start through $end {
+    .order-#{$i} {
+      order: $i !important;
+    }
+    
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .order-#{$breakpoint}-#{$i} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          order: $i !important;
+        }
+      }
+    }
+  }
+}
+
+@include order-classes(1, 5);

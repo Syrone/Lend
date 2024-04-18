@@ -1,0 +1,27 @@
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 15;
+
+	&__top {
+		display: flex;
+		align-items: center;
+		padding-block: 1.5rem;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-top: var(--border-primary);
+		padding-block: 1.25rem;
+	}
+
+	&__menu {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}

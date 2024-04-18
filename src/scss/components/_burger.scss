@@ -1,0 +1,8 @@
+.burger {
+	@include burger;
+
+	--_padding-y: .75rem;
+	--_padding-x: .375rem;
+
+	--_color-active: var(--primary-color);
+}

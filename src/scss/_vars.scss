@@ -2,11 +2,71 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
-  --container-offset: 15px;
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Roboto", sans-serif;
+  --content-width: 81.25rem;
+  --container-offset: 1.25rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
+  // typography
+  --h1: 2.5rem;
+  --h2: 2.25rem;
+  --h3: 2rem;
+  --h4: 1.75rem;
+  --h5: 1.5rem;
+  --h6: 1.375rem;
+
+  --fs-xs: .75rem;
+  --fs-sm: .875rem;
+  --fs: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.375rem;
+  --fs-xxl: 1.5rem;
+
   // colors
+  --primary-color: #b46ec6;
+  --secondary-color: #e36d00;
+  --header-color: #14261c;
+  --text-color: #000;
+  --text-color--light: #54595f;
+  --text-color--lighter: #6e6e6e;
   --light-color: #fff;
+  --dark-color: #000;
+
+  --background: #fff;
+  --background-primary: var(--primary-color);
+  --background-secondary: var(--secondary-color);
+  --background-light: #f3f3f3;
+  --background-gray: #e8e8e8;
+
+  // borders
+  --border-primary: .0625rem solid var(--primary-color);
+  --border-primary-md: .125rem solid var(--primary-color);
+  --border-transparent: .0625rem solid transparent;
+  --border-transparent-md: .125rem solid transparent;
+
+  // radius
+  --radius-xs: .5rem;
+  --radius-sm: .75rem;
+  --radius: 1rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 1.5rem;
+
+  // offsets
+  --offset-0: 0;
+  --offset-1: .5rem;
+  --offset-2: .75rem;
+  --offset-3: 1rem;
+  --offset-4: 1.25rem;
+  --offset-5: 1.5rem;
+  --offset-6: 1.75rem;
+  --offset-7: 2rem;
+  --offset-8: 2.25rem;
+  --offset-9: 2.5rem;
+  --offset-10: 2.75rem;
+
+  // transitions
+  --transition-duration: 300ms;
+  --transition-type: ease-in-out;
 }
