@@ -1,18 +1,75 @@
 $breakpoints: (
-	xs: 23.75rem,
+  xs: 23.75rem,
   sm: 36rem,
   md: 48rem,
   lg: 62rem,
   xl: 75rem,
-	xxl: 87.5rem
+  xxl: 87.5rem
 );
+
+$direction-values: (
+  row: row,
+  row-reverse: row-reverse,
+  column: column,
+  column-reverse: column-reverse
+);
+
+$justify-content-values: (
+  start: start,
+  center: center,
+  end: end
+);
+
+@mixin direction-classes($values) {
+  @each $class, $value in $values {
+    .flex-#{$class} {
+      flex-direction: $value !important;
+    }
+  }
+}
+
+@mixin direction-breakpoints-classes($values) {
+  @each $class, $value in $values {
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .flex-#{$breakpoint}-#{$class} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          flex-direction: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin justify-content-classes($values) {
+  @each $class, $value in $values {
+    .justify-content-#{$class} {
+      justify-content: $value !important;
+    }
+  }
+}
+
+@mixin justify-content-breakpoints-classes($values) {
+  @each $class, $value in $values {
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .justify-content-#{$breakpoint}-#{$class} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          justify-content: $value !important;
+        }
+      }
+    }
+  }
+}
 
 @mixin order-classes($start, $end) {
   @for $i from $start through $end {
     .order-#{$i} {
       order: $i !important;
     }
-    
+  }
+}
+
+@mixin order-breakpoints-classes($start, $end) {
+  @for $i from $start through $end {
     @each $breakpoint, $breakpointValue in $breakpoints {
       .order-#{$breakpoint}-#{$i} {
         @media (max-width: map-get($breakpoints, $breakpoint)) {
@@ -32,13 +89,17 @@ $breakpoints: (
 @mixin grid($start, $end) {
   @for $i from $start through $end {
     .grid-col-#{$i} {
-      grid-column: 1 / #{$i + 1} !important;
+      grid-column: span #{$i} !important;
     }
-    
+  }
+}
+
+@mixin grid-breakpoints($start, $end) {
+  @for $i from $start through $end {
     @each $breakpoint, $breakpointValue in $breakpoints {
       .grid-col-#{$breakpoint}-#{$i} {
         @media (max-width: map-get($breakpoints, $breakpoint)) {
-          grid-column: 1 / #{$i + 1} !important;
+          grid-column: span #{$i} !important;
         }
       }
     }
@@ -50,7 +111,11 @@ $breakpoints: (
     .grid-gap-#{$i} {
       gap: var(--offset-#{$i}) !important;
     }
-    
+  }
+}
+
+@mixin gridGap-breakpoints($start, $end) {
+  @for $i from $start through $end {
     @each $breakpoint, $breakpointValue in $breakpoints {
       .grid-gap-#{$breakpoint}-#{$i} {
         @media (max-width: map-get($breakpoints, $breakpoint)) {
@@ -63,28 +128,16 @@ $breakpoints: (
 
 @mixin gridGapY($start, $end) {
   @for $i from $start through $end {
-    .grid-gap-#{$i} {
-      row-gap: var(--offset-#{$i}) !important;
-    }
-    
-    @each $breakpoint, $breakpointValue in $breakpoints {
-      .grid-gap-#{$breakpoint}-#{$i} {
-        @media (max-width: map-get($breakpoints, $breakpoint)) {
-          row-gap: var(--offset-#{$i}) !important;
-        }
-      }
+    .grid-gap-y-#{$i} {
+      column-gap: var(--offset-#{$i}) !important;
     }
   }
 }
 
-@mixin gridGapX($start, $end) {
+@mixin gridGapY-breakpoints($start, $end) {
   @for $i from $start through $end {
-    .grid-gap-#{$i} {
-      column-gap: var(--offset-#{$i}) !important;
-    }
-    
     @each $breakpoint, $breakpointValue in $breakpoints {
-      .grid-gap-#{$breakpoint}-#{$i} {
+      .grid-gap-y-#{$breakpoint}-#{$i} {
         @media (max-width: map-get($breakpoints, $breakpoint)) {
           column-gap: var(--offset-#{$i}) !important;
         }
@@ -93,8 +146,37 @@ $breakpoints: (
   }
 }
 
+@mixin gridGapX($start, $end) {
+  @for $i from $start through $end {
+    .grid-gap-x-#{$i} {
+      row-gap: var(--offset-#{$i}) !important;
+    }
+  }
+}
+
+@mixin gridGapX-breakpoints($start, $end) {
+  @for $i from $start through $end {
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .grid-gap-x-#{$breakpoint}-#{$i} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          row-gap: var(--offset-#{$i}) !important;
+        }
+      }
+    }
+  }
+}
+
 @include order-classes(1, 5);
+@include order-breakpoints-classes(1, 5);
 @include grid(1, 12);
-@include gridGap(1, 10);
-@include gridGapY(1, 10);
-@include gridGapX(1, 10);
+@include grid-breakpoints(1, 12);
+@include gridGap(0, 10);
+@include gridGap-breakpoints(0, 10);
+@include gridGapY(0, 10);
+@include gridGapY-breakpoints(0, 10);
+@include gridGapX(0, 10);
+@include gridGapX-breakpoints(0, 10);
+@include justify-content-classes($justify-content-values);
+@include justify-content-breakpoints-classes($justify-content-values);
+@include direction-classes($direction-values);
+@include direction-breakpoints-classes($direction-values);

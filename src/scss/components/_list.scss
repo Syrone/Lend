@@ -1,0 +1,22 @@
+.numeric-list {
+  counter-reset: numeric-counter;
+
+	&__item {
+		padding-inline-start: 6.25rem;
+		position: relative;
+
+		&::before {
+			content: counter(numeric-counter);
+  		counter-increment: numeric-counter;
+			font-family: var(--second-family);
+			font-size: var(--h3);
+			font-weight: 500;
+			line-height: 1;
+			color: var(--primary-color);
+			position: absolute;
+			top: 50%;
+			left: 2.25rem;
+			transform: translateY(-50%);
+		}
+	}
+}

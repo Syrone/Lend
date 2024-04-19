@@ -1,0 +1,10 @@
+.checkbox {
+	font-size: var(--fs-xs);
+	font-weight: 700;
+	color: var(--sub-header-color);
+	cursor: pointer;
+
+	&__field {
+		transform: translateY(.1rem);
+	}
+}

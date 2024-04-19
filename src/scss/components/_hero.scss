@@ -1,0 +1,22 @@
+.hero {
+
+	&__bg {
+		min-height: 37.5rem;
+	}
+
+	&__bottom {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: var(--offset-3) var(--offset-7);
+
+		&-btn {
+			--_background-color: var(--background);
+
+			--_icon-size: 1rem;
+
+			--_border-color-active: var(--background)
+		}
+	}
+}

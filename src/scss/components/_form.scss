@@ -1,0 +1,8 @@
+.form {
+
+	&__submit {
+		--_font-weight: 700;
+		--_background-color: var(--background);
+		--_border-radius: var(--radius-sm);
+	}
+}

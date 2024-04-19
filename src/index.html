@@ -8,8 +8,382 @@
     @include('partials/header.html')
     <main class="main">
 
-      
-      
+      <section class="hero">
+        <div class="hero__bg background-image" style="background-image: url(./img/hero-bg.webp);"></div>
+        <div class="background-primary py-3">
+          <div class="container">
+            <div class="hero__bottom">
+              <button type="button" class="btn btn-lg btn-primary-outline hero__bottom-btn">
+                Записаться на прием
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right.svg#svg-arrow-right"></use>
+                  </svg>
+                </span>
+              </button>
+              <button type="button" class="btn btn-lg btn-primary-outline hero__bottom-btn">
+                Выбрать специалиста
+              </button>
+              <button type="button" class="btn btn-lg btn-primary-outline hero__bottom-btn">
+                Подобрать врача
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/people.svg#svg-people"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages py-10">
+        <div class="container">
+          <div class="grid-row grid-gap-10 grid-gap-lg-6">
+            <div class="grid-col-4 grid-col-lg-6 grid-col-md-12">
+              <div class="advantages__item">
+                <h3 class="h5 fw-700 advantages__item-title mye-2">
+                  Узнать уровень депрессии
+                </h3>
+                <p class="advantages__item-text">
+                  Желаешь узнать свой уровень депрессии, пройди
+                  тест и получи консультацию специалистов
+                  клиники
+                </p>
+              </div>
+            </div>
+            <div class="grid-col-4 grid-col-lg-6 grid-col-md-12">
+              <div class="advantages__item">
+                <h3 class="h5 fw-700 advantages__item-title mye-2">
+                  Экспресс-оценка выгорания
+                </h3>
+                <p class="advantages__item-text">
+                  Желаешь узнать свой уровень тревоги, пройди
+                  тест и получи консультацию специалистов
+                  клиники
+                </p>
+              </div>
+            </div>
+            <div class="grid-col-4 grid-col-lg-12">
+              <div class="advantages__item">
+                <h3 class="h5 fw-700 advantages__item-title mye-2">
+                  Узнать уровень тревоги
+                </h3>
+                <p class="advantages__item-text">
+                  Желаешь узнать свой уровень тревоги, пройди
+                  тест и получи консультацию специалистов
+                  клиники
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="category">
+        <div class="tabs category-tabs" data-tabs="categoryTabs">
+          <div class="tabs__content background-gray--light py-4">
+            <div class="tabs__panel">
+              <div class="container tabs__panel-container">
+                <span class="icon category__image mx-8 mx-lg-4 mx-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/syringe.svg#svg-syringe"></use>
+                  </svg>
+                </span>
+                <div class="category__content">
+                  <h3 class="h2 m-0">
+                    IV-терапия
+                  </h3>
+                  <p class="category__content-text">
+                    Мы комплексно подходим к здоровью клиентов и назначаем капельницы индивидуально, исходя из
+                    рекомендации врача и результатов анализов.
+                  </p>
+                </div>
+                <a href="./article.html" class="category__link"></a>
+                <span class="icon category__icon mxe-8 mxe-lg-4 mxe-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right-2.svg#svg-arrow-right-2"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <div class="container tabs__panel-container">
+                <span class="icon category__image mx-8 mx-lg-4 mx-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/head.svg#svg-head"></use>
+                  </svg>
+                </span>
+                <div class="category__content">
+                  <h3 class="h2 m-0">
+                    Психиатрия
+                  </h3>
+                  <p class="category__content-text">
+                    Мы комплексно подходим к здоровью клиентов и назначаем капельницы индивидуально, исходя из
+                    рекомендации врача и результатов анализов.
+                  </p>
+                </div>
+                <a href="./article.html" class="category__link"></a>
+                <span class="icon category__icon mxe-8 mxe-lg-4 mxe-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right-2.svg#svg-arrow-right-2"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <div class="container tabs__panel-container">
+                <span class="icon category__image mx-8 mx-lg-4 mx-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/neurology.svg#svg-neurology"></use>
+                  </svg>
+                </span>
+                <div class="category__content">
+                  <h3 class="h2 m-0">
+                    Неврология
+                  </h3>
+                  <p class="category__content-text">
+                    Мы комплексно подходим к здоровью клиентов и назначаем капельницы индивидуально, исходя из
+                    рекомендации врача и результатов анализов.
+                  </p>
+                </div>
+                <a href="./article.html" class="category__link"></a>
+                <span class="icon category__icon mxe-8 mxe-lg-4 mxe-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right-2.svg#svg-arrow-right-2"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <div class="container tabs__panel-container">
+                <span class="icon category__image mx-8 mx-lg-4 mx-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/psychotherapy.svg#svg-psychotherapy"></use>
+                  </svg>
+                </span>
+                <div class="category__content">
+                  <h3 class="h2 m-0">
+                    Психотерапия
+                  </h3>
+                  <p class="category__content-text">
+                    Мы комплексно подходим к здоровью клиентов и назначаем капельницы индивидуально, исходя из
+                    рекомендации врача и результатов анализов.
+                  </p>
+                </div>
+                <a href="./article.html" class="category__link"></a>
+                <span class="icon category__icon mxe-8 mxe-lg-4 mxe-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right-2.svg#svg-arrow-right-2"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <div class="container tabs__panel-container">
+                <span class="icon category__image mx-8 mx-lg-4 mx-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/children.svg#svg-children"></use>
+                  </svg>
+                </span>
+                <div class="category__content">
+                  <h3 class="h2 m-0">
+                    Детское направление
+                  </h3>
+                  <p class="category__content-text">
+                    Мы комплексно подходим к здоровью клиентов и назначаем капельницы индивидуально, исходя из
+                    рекомендации врача и результатов анализов.
+                  </p>
+                </div>
+                <a href="./article.html" class="category__link"></a>
+                <span class="icon category__icon mxe-8 mxe-lg-4 mxe-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right-2.svg#svg-arrow-right-2"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <div class="container tabs__panel-container">
+                <span class="icon category__image mx-8 mx-lg-4 mx-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/physiotherapy.svg#svg-physiotherapy"></use>
+                  </svg>
+                </span>
+                <div class="category__content">
+                  <h3 class="h2 m-0">
+                    Физиотерапия
+                  </h3>
+                  <p class="category__content-text">
+                    Мы комплексно подходим к здоровью клиентов и назначаем капельницы индивидуально, исходя из
+                    рекомендации врача и результатов анализов.
+                  </p>
+                </div>
+                <a href="./article.html" class="category__link"></a>
+                <span class="icon category__icon mxe-8 mxe-lg-4 mxe-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right-2.svg#svg-arrow-right-2"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              <div class="container tabs__panel-container">
+                <span class="icon category__image mx-8 mx-lg-4 mx-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/epileptology.svg#svg-epileptology"></use>
+                  </svg>
+                </span>
+                <div class="category__content">
+                  <h3 class="h2 m-0">
+                    Эпилептология
+                  </h3>
+                  <p class="category__content-text">
+                    Мы комплексно подходим к здоровью клиентов и назначаем капельницы индивидуально, исходя из
+                    рекомендации врача и результатов анализов.
+                  </p>
+                </div>
+                <a href="./article.html" class="category__link"></a>
+                <span class="icon category__icon mxe-8 mxe-lg-4 mxe-md-0">
+                  <svg>
+                    <use xlink:href="img/icons/arrow-right-2.svg#svg-arrow-right-2"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="background-gray">
+            <div class="container">
+              <ul class="list-reset tabs__nav">
+                <li class="tabs__nav-item">
+                  <button type="button" class="btn tabs__nav-btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/syringe.svg#svg-syringe"></use>
+                      </svg>
+                    </span>
+                    IV-терапия
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button type="button" class="btn tabs__nav-btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/head.svg#svg-head"></use>
+                      </svg>
+                    </span>
+                    Психиатрия
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button type="button" class="btn tabs__nav-btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/neurology.svg#svg-neurology"></use>
+                      </svg>
+                    </span>
+                    Неврология
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button type="button" class="btn tabs__nav-btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/psychotherapy.svg#svg-psychotherapy"></use>
+                      </svg>
+                    </span>
+                    Психотерапия
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button type="button" class="btn tabs__nav-btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/children.svg#svg-children"></use>
+                      </svg>
+                    </span>
+                    Детское направление
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button type="button" class="btn tabs__nav-btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/physiotherapy.svg#svg-physiotherapy"></use>
+                      </svg>
+                    </span>
+                    Физиотерапия
+                  </button>
+                </li>
+                <li class="tabs__nav-item">
+                  <button type="button" class="btn tabs__nav-btn">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/epileptology.svg#svg-epileptology"></use>
+                      </svg>
+                    </span>
+                    Эпилептология
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features py-10">
+        <div class="container">
+          <div class="grid-row grid-gap-10 grid-gap-lg-6">
+            <div class="grid-col-8 grid-col-xl-7 grid-col-lg-12 pxe-10 pxe-xl-0">
+              <h2 class="h1 title-decoration">
+                <span class="sup-header primary-color">
+                  Почему пациенты выбирают нас?
+                </span>
+                Наши особенности
+              </h2>
+
+              <ol class="list-reset numeric-list d-grid grid-gap-x-4 pxe-10 pxe-xl-0">
+                <li class="numeric-list__item">
+                  <h3 class="h7 lh-lg text-color--light m-0">
+                    Врачи, которым можно доверять
+                  </h3>
+                  <p class="lh-xl text-color--lighter">
+                    У нас работают 7 кандидатов наук и 12 врачей высшей категории, с опытом
+                    работы от 16 до 38 лет.
+                  </p>
+                </li>
+                <li class="numeric-list__item">
+                  <h3 class="h7 lh-lg text-color--light m-0">
+                    Уникальные знания и опыт
+                  </h3>
+                  <p class="lh-xl text-color--lighter">
+                    Специалисты DocBrain не только получали знания в лучших университетах
+                    России, но также проходили обучение у ведущих тренеров Великобритании,
+                    Франции, США и Австрии
+                  </p>
+                </li>
+                <li class="numeric-list__item">
+                  <h3 class="h7 lh-lg text-color--light m-0">
+                    Удобные консультации онлайн
+                  </h3>
+                  <p class="lh-xl text-color--lighter">
+                    Если у Вас нет возможности приехать в Краснодар, то наши врачи проведут
+                    консультацию по Skype, WhatsApp или с помощью других мессенджеров.
+                  </p>
+                </li>
+              </ol>
+            </div>
+            <div class="grid-col-4 grid-col-xl-5 grid-col-lg-12 d-lg-none">
+              <picture>
+                <source srcset="./img/features.webp" type="image/webp">
+                <img loading="lazy" src="./img/features.jpg" class="image" width="403" height="458" alt="Картинка">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @include('partials/form.html')
     </main>
     @include('partials/footer.html')
   </div>
