@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	line-height: 1.25;
-	color: var(--light-color);
+	color: var(--header-color);
 	margin-block: 0 2rem;
 }
 
@@ -56,4 +56,29 @@ p {
 
 .text-initial {
 	text-decoration: initial !important;
+}
+
+.title-decoration {
+	position: relative;
+	padding-block-end: 1rem;
+	z-index: 1;
+
+	&::after {
+		content: '';
+		width: 100%;
+		max-width: 11.875rem;
+		height: .125rem;
+		background-color: var(--background-primary);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&-sm {
+
+		&::after {
+			max-width: 4.375rem;
+		}
+	}
 }

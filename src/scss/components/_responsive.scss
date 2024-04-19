@@ -98,14 +98,16 @@
 /** > 992px **/
 @media (max-width: 62rem) {
 
-	
+
 
 }
 
 /** > 768px **/
 @media (max-width: 48rem) {
 
-	
+	.footer__inner {
+		flex-wrap: wrap;
+	}
 
 }
 

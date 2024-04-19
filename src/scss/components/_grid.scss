@@ -23,4 +23,78 @@ $breakpoints: (
   }
 }
 
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--offset-5);
+}
+
+@mixin grid($start, $end) {
+  @for $i from $start through $end {
+    .grid-col-#{$i} {
+      grid-column: 1 / #{$i + 1} !important;
+    }
+    
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .grid-col-#{$breakpoint}-#{$i} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          grid-column: 1 / #{$i + 1} !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin gridGap($start, $end) {
+  @for $i from $start through $end {
+    .grid-gap-#{$i} {
+      gap: var(--offset-#{$i}) !important;
+    }
+    
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .grid-gap-#{$breakpoint}-#{$i} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          gap: var(--offset-#{$i}) !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin gridGapY($start, $end) {
+  @for $i from $start through $end {
+    .grid-gap-#{$i} {
+      row-gap: var(--offset-#{$i}) !important;
+    }
+    
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .grid-gap-#{$breakpoint}-#{$i} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          row-gap: var(--offset-#{$i}) !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin gridGapX($start, $end) {
+  @for $i from $start through $end {
+    .grid-gap-#{$i} {
+      column-gap: var(--offset-#{$i}) !important;
+    }
+    
+    @each $breakpoint, $breakpointValue in $breakpoints {
+      .grid-gap-#{$breakpoint}-#{$i} {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          column-gap: var(--offset-#{$i}) !important;
+        }
+      }
+    }
+  }
+}
+
 @include order-classes(1, 5);
+@include grid(1, 12);
+@include gridGap(1, 10);
+@include gridGapY(1, 10);
+@include gridGapX(1, 10);

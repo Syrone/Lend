@@ -1,0 +1,28 @@
+.mail {
+	display: grid;
+	gap: .75rem;
+
+	&__text {
+		line-height: 1.75rem;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: stretch;
+		gap: .625rem;
+	}
+
+	&__field {
+		--field-radius: .125rem;
+		--field-font-weight: 400;
+	}
+
+	&__submit {
+		--_height: auto;
+		--_border-radius: .125rem;
+		--_padding-x: 1.875rem;
+
+		--_icon-size: 1.25rem;
+	}
+
+}

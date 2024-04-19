@@ -1,0 +1,63 @@
+.field-wrapper {
+	position: relative;
+
+	+ .field-wrapper {
+		margin-block-start: .75rem;
+	}
+}
+
+.field {
+	--field-height: 2.875rem;
+	--field-font-size: var(--fs);
+	--field-font-weight: 700;
+	--field-line-height: normal;
+	--field-color: #797a7c;
+	--field-background: var(--background);
+	--field-border: var(--border);
+	--field-radius: var(--radius);
+	--field-padding-y: .25rem;
+	--field-padding-x: .75rem;
+	--field-icon-size: 1rem;
+	--field-icon-color: currentColor;
+
+	--placeholder-font-size: var(--field-font-size);
+	--placeholder-font-weight: var(--field-font-weight);
+	--placheholder-line-height: var(--field-line-height);
+	--placheholder-color: var(--field-color);
+
+	width: 100%;
+	min-height: var(--field-height);
+	display: block;
+	font-size: var(--field-font-size);
+	font-weight: var(--field-font-weight);
+	line-height: var(--field-line-height);
+	color: var(--field-color);
+	background-color: var(--field-background);
+	border: var(--field-border);
+	border-radius: var(--field-radius);
+	padding: var(--field-padding-y) var(--field-padding-x);
+	outline: none;
+	transition: border var(--transition-duration) var(--transition-type);
+
+	.icon {
+		--_i-size: var(--field-icon-size);
+		--_i-color: var(--field-icon-color);
+	}
+
+	&:focus {
+		border-color: var(--primary-color);
+	}
+
+	&::placeholder {
+		font-size: var(--placeholder-font-size);
+		font-weight: var(--placeholder-font-weight);
+		line-height: var(--placheholder-line-height);
+		color: var(--placheholder-color);
+	}
+}
+
+.field-agree {
+	font-size: .625rem;
+	color: var(--gray-color--light);
+	margin-block-start: 2rem;
+}
